@@ -4,11 +4,16 @@
     background-position: center bottom;
 }
 
+.container-main{
+    flex: 1;
+} 
+
 .header{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: -25px;
 }
 
 .logo{
@@ -87,6 +92,8 @@
     color: $mustard;
     font-size: 72px;
     padding-bottom: 15px;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .main__desc{
@@ -134,9 +141,13 @@
         @include dot;
     }
 
+    &:hover{
+        outline-width: 0;
+    }
+
 }
 
-.points__item--active .points__link::before{
+.points__item--active .points__link::before, .points__link:hover:before{
     width: 14px;
     height: 14px;
     opacity: 1;
