@@ -1,0 +1,33 @@
+//config
+
+$white: #ffffff;
+$mustard: #f9b43b;
+$dark:#2f3234;
+$orange:#e45028;
+$gray: #2f3234;
+
+//mixin
+
+@mixin dot{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+@function rem($px){
+    @return $px  / 16px+0rem;
+}
+
+//base
+
+@import "setup.scss";
+
+//sections
+
+@import "sections/hello.scss";
+@import "sections/best.scss";
+@import "sections/feedback.scss";

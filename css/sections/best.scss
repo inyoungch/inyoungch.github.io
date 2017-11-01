@@ -1,0 +1,57 @@
+.best{
+    background: url(../img/bg2.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+
+.main__title--dark{
+    color: $dark;
+    margin-top: -80px;
+    padding-bottom: 70px;
+}
+
+.best-block{
+    display: flex;
+    flex-direction: row;
+}
+
+.advantage__list{
+    display: flex;
+
+}
+
+.advantage__img{
+    width: 280px;
+    height: 100px;
+}
+
+.advantage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+
+    & p{
+        margin: 0;
+
+    }
+}
+
+
+.advantage__title{
+    color: $dark;
+    font-family: Lifehack;
+    font-size: 24px;
+    padding: 30px 0;
+    line-height: 24px;
+}
+
+.advantage__desc p{
+    margin: 0;
+    color: $dark;
+    font-size: 14px;
+    font-weight: 300;
+}
