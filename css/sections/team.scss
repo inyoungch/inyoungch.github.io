@@ -1,0 +1,127 @@
+.team{
+    background: url(../img/bg4.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.team__container{
+    position: absolute;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(#2f3234, .93);
+    padding-left: rem(80px);
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(90px);
+
+    @include tablets{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.team__block{
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.accordeon{
+    padding-top: rem(90px);
+
+}
+
+.accordeon__item{
+    @include tablets{
+        text-align: center;
+    }
+}
+
+.accordeon__desc{
+    display: flex;
+    display: none;
+}
+
+.accordeon__text{
+    width: rem(240px);
+}
+
+.accordeon__link{
+    font-family: Gagalin;
+    color: $white;
+    font-size: rem(14px);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-bottom: rem(15px);
+
+    &::before{
+        content: "";
+        width: 0;
+        height: 0;
+        border: rem(7px) solid transparent;
+        border-top-color: $mustard;
+        border-bottom-width: 0;
+        margin-right: rem(10px);
+    }
+
+    @include tablets{
+        font-size: rem(25px);
+        justify-content: center;
+    }
+}
+
+.accordeon__pic{
+    width: rem(100px);
+    height: rem(100px);
+    border-radius: 50%;
+    margin-right: rem(20px);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+
+    @include tablets{
+        margin-right: 0;
+        margin-bottom: rem(10px);
+    }
+}
+
+
+.accordeon__title{
+    font-weight: bold;
+    color: $white;
+    font-size: rem(14px);
+}
+
+.accordeon__about{
+    font-weight: 300;
+    color: $white;
+    font-size: rem(14px);
+}
+
+.accordeon__item--active{
+    .accordeon__link{
+        color: $mustard;
+
+        &::before{
+            transform: rotate(180deg);
+        }
+    }
+
+    .accordeon__desc{
+        display: block;
+        display: flex;
+
+        @include tablets{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+

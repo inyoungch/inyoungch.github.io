@@ -1,0 +1,158 @@
+.order{
+    background: url(../img/bg7.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.form__title{
+    padding-bottom: rem(60px);
+
+    @include phones{
+        text-align: center;
+    }
+}
+
+.form{
+
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.form__content{
+    float: left;
+    width: 45%;
+    margin-left: 5%;
+
+    @include tablets{
+        margin-left: 0;
+        width: 100%;
+        padding: 0 25%;
+    }
+
+    @include phones{
+        padding: 0 5%;
+    }
+}
+
+.form__row{
+    display: flex;
+    margin-bottom: rem(20px);
+}
+
+.form__block{
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.form__block-title{
+    color: $white;
+    font-size: rem(14px);
+    font-weight: 300;
+}
+
+.form__input{
+    border: none;
+    border-radius: rem(4px);
+    padding: rem(5px);
+    width: 100%;
+}
+
+.form__content-second .form__row{
+    margin-bottom: rem(10px);
+}
+
+.form__textarea{
+    height: rem(110px);
+}
+
+.form__radio{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    margin-right: rem(20px);
+}
+
+.form__radio-elem{
+    position: absolute;
+    top: 0;
+    left: rem(-9999px);
+}
+
+
+
+.form__radio-fake{
+    width: rem(16px);
+    height: rem(16px);
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    position: relative;
+    background: $white;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: $orange;
+        transition: 0.4s;
+    }
+}
+
+.form__radio-elem:checked + .form__radio-fake:after {
+    width: rem(8px);
+    height: rem(8px);
+  }
+  
+.form__radio__title{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: rem(14px);
+    color: #fff;
+    margin-left: rem(10px);
+}
+
+.form__checkbox {
+    .form__radio-fake {
+      border-radius: 0;
+    }
+    .form__radio-elem {
+      &+.form__radio-fake {
+        &:after {
+          background: transparent;
+        }
+      }
+    }
+    .form__radio-elem:checked {
+      &+.form__radio-fake {
+        &:after {
+          background: url("../img/icons/i/check.svg") 50% no-repeat transparent;
+          background-size: contain;
+          width: rem(11px);
+          height: rem(9px);
+        }
+      }
+    }
+  }
+
+.btn__submit{
+      margin-right: rem(20px);
+  }
+
+.btn__reset{
+    background: transparent;
+    color:$white;
+    outline: none;
+    border: 1px solid transparent;
+    font-size: rem(14px);
+    cursor: pointer;
+  }
