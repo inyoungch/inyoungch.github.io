@@ -3,11 +3,22 @@
     background-size: cover;
 }
 
+.order__container{
+    @include iphone5{
+        justify-content: flex-start;
+    }
+}
+
 .form__title{
     padding-bottom: rem(60px);
 
     @include phones{
         text-align: center;
+    }
+
+    @include iphone5{
+        padding-top: rem(30px);
+        line-height: rem(60px);
     }
 }
 
@@ -35,6 +46,13 @@
     }
 }
 
+.form__content-second{
+    @include iphone5{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .form__row{
     display: flex;
     margin-bottom: rem(20px);

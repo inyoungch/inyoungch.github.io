@@ -26,6 +26,10 @@
         height: 10%;
     }
 
+    @include iphone5{
+        height: 13%;
+    }
+
 }
 
 .footer__left, .footer__right{

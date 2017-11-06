@@ -20,6 +20,10 @@
         width: 100%;
         text-align: center;
     }
+
+    @include iphone5{
+        padding: 0;
+    }
 }
 
 .team__block{
@@ -30,9 +34,18 @@
     }
 }
 
+.title__team{
+    @include iphone5{
+        padding:rem(30px) 0;
+    }
+}
+
 .accordeon{
     padding-top: rem(90px);
 
+    @include iphone5{
+        padding: 0;
+    }
 }
 
 .accordeon__item{

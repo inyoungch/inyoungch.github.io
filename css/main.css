@@ -46,6 +46,9 @@ html {
   @media screen and (max-width: 480px) {
     html {
       font-size: 14px; } }
+  @media screen and (max-width: 320px) {
+    html {
+      font-size: 12px; } }
 
 html, body {
   width: 100%;
@@ -162,6 +165,9 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   margin-top: 0.625rem;
   margin-right: 13.75rem; }
+  @media screen and (max-width: 320px) {
+    .logo {
+      margin-right: 0; } }
 
 .logo__img {
   max-height: 100%;
@@ -276,6 +282,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 1.25rem;
   margin-right: 0.9375rem; }
 
+.main__img {
+  width: 100%; }
+
 .main__text {
   padding-top: 1.875rem; }
   @media screen and (max-width: 768px) {
@@ -290,12 +299,18 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0.9375rem;
   font-weight: normal;
   font-style: normal; }
+  @media screen and (max-width: 320px) {
+    .main__title {
+      font-size: 4.0625rem; } }
 
 .main__desc {
   font-family: Lifehack;
   color: #ffffff;
   font-size: 4.0625rem;
   line-height: 3.75rem; }
+  @media screen and (max-width: 320px) {
+    .main__desc {
+      font-size: 3.4375rem; } }
 
 .arrow {
   display: -webkit-box;
@@ -408,6 +423,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #2f3234;
   margin-top: -5rem;
   padding-bottom: 4.375rem; }
+  @media screen and (max-width: 320px) {
+    .main__title--dark {
+      padding-bottom: 1.875rem;
+      font-size: 3.125rem; } }
 
 .best-block {
   display: -webkit-box;
@@ -526,6 +545,9 @@ h1, h2, h3, h4, h5, h6 {
     .team__container {
       width: 100%;
       text-align: center; } }
+  @media screen and (max-width: 320px) {
+    .team__container {
+      padding: 0; } }
 
 @media screen and (max-width: 768px) {
   .team__block {
@@ -543,8 +565,15 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex-align: center;
     align-items: center; } }
 
+@media screen and (max-width: 320px) {
+  .title__team {
+    padding: 1.875rem 0; } }
+
 .accordeon {
   padding-top: 5.625rem; }
+  @media screen and (max-width: 320px) {
+    .accordeon {
+      padding: 0; } }
 
 @media screen and (max-width: 768px) {
   .accordeon__item {
@@ -800,6 +829,16 @@ h1, h2, h3, h4, h5, h6 {
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center; } }
+  @media screen and (max-width: 320px) {
+    .feedback__desc {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .feedback__name {
   font-size: 0.875rem;
@@ -850,11 +889,22 @@ h1, h2, h3, h4, h5, h6 {
   background: url(../img/bg7.jpg) center center no-repeat;
   background-size: cover; }
 
+@media screen and (max-width: 320px) {
+  .order__container {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; } }
+
 .form__title {
   padding-bottom: 3.75rem; }
   @media screen and (max-width: 480px) {
     .form__title {
       text-align: center; } }
+  @media screen and (max-width: 320px) {
+    .form__title {
+      padding-top: 1.875rem;
+      line-height: 3.75rem; } }
 
 @media screen and (max-width: 768px) {
   .form {
@@ -880,6 +930,22 @@ h1, h2, h3, h4, h5, h6 {
   @media screen and (max-width: 480px) {
     .form__content {
       padding: 0 5%; } }
+
+@media screen and (max-width: 320px) {
+  .form__content-second {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; } }
 
 .form__row {
   display: -webkit-box;
@@ -1020,6 +1086,9 @@ h1, h2, h3, h4, h5, h6 {
   @media screen and (max-width: 480px) {
     .footer {
       height: 10%; } }
+  @media screen and (max-width: 320px) {
+    .footer {
+      height: 13%; } }
 
 .footer__left, .footer__right {
   width: 50%; }

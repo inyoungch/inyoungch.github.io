@@ -31,6 +31,10 @@
     overflow: hidden;
     margin-top: rem(10px);
     margin-right: rem(220px);
+
+    @include iphone5{
+        margin-right: 0;
+    }
 }
 
 .logo__img{
@@ -133,6 +137,10 @@
     margin-right: rem(15px);
 }
 
+.main__img{
+    width: 100%;
+}
+
 .main__text{
     padding-top: rem(30px);
 
@@ -149,6 +157,10 @@
     padding-bottom: rem(15px);
     font-weight: normal;
     font-style: normal;
+
+    @include iphone5{
+        font-size: rem(65px);
+    }
 }
 
 .main__desc{
@@ -156,6 +168,10 @@
     color: $white;
     font-size: rem(65px);
     line-height: rem(60px);
+
+    @include iphone5{
+        font-size: rem(55px);
+    }
 }
 
 .arrow{

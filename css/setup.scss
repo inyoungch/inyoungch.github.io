@@ -60,6 +60,10 @@ html{
 	@include phones{
 		font-size: 14px;
 	}
+
+	@include iphone5{
+		font-size: 12px;
+	}
 }
 
 html, body{

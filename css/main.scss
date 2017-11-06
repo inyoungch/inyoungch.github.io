@@ -8,6 +8,7 @@ $gray: #2f3234;
 
 $tablets:768px;
 $phones:480px;
+$iphone5:320px;
 
 //mixin
 
@@ -33,6 +34,12 @@ $phones:480px;
 
 @mixin phones{
     @media screen and (max-width:$phones){
+        @content;
+    }
+}
+
+@mixin iphone5{
+    @media screen and (max-width:$iphone5){
         @content;
     }
 }
