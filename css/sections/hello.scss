@@ -179,6 +179,7 @@
 .arrow{
     display: flex;
     justify-content: center;
+    padding-bottom: rem(40px);
 }
 
 .hamburger__menu-link{
@@ -221,6 +222,18 @@
     position: fixed;
     top: 21%;
     right: 4%;
+
+    @include tablets{
+        display: none;
+    }
+
+    @include phones{
+        display: none;
+    }
+
+    @include iphone5{
+        display: none;
+    }
 }
 
 .points__item{

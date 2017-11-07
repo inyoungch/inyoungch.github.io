@@ -34,6 +34,12 @@
   font-weight: bold;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Font Awesome';
+  src: url("../fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/fontawesome-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -321,7 +327,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  padding-bottom: 2.5rem; }
 
 .hamburger__menu-link {
   vertical-align: middle;
@@ -361,6 +368,15 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 21%;
   right: 4%; }
+  @media screen and (max-width: 768px) {
+    .points__list {
+      display: none; } }
+  @media screen and (max-width: 480px) {
+    .points__list {
+      display: none; } }
+  @media screen and (max-width: 320px) {
+    .points__list {
+      display: none; } }
 
 .points__item {
   margin-bottom: 0.3125rem; }
@@ -545,7 +561,11 @@ h1, h2, h3, h4, h5, h6 {
   @media screen and (max-width: 768px) {
     .team__container {
       width: 100%;
-      text-align: center; } }
+      text-align: center;
+      padding-left: 0; } }
+  @media screen and (max-width: 480px) {
+    .team__container {
+      padding-left: 0; } }
   @media screen and (max-width: 320px) {
     .team__container {
       padding: 0; } }
@@ -927,7 +947,7 @@ h1, h2, h3, h4, h5, h6 {
     .form__content {
       margin-left: 0;
       width: 100%;
-      padding: 0 25%; } }
+      padding: 0 15%; } }
   @media screen and (max-width: 480px) {
     .form__content {
       padding: 0 5%; } }
