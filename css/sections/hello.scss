@@ -31,6 +31,7 @@
     overflow: hidden;
     margin-top: rem(10px);
     margin-right: rem(220px);
+    z-index: 200;
 
     @include iphone5{
         margin-right: 0;
@@ -44,6 +45,7 @@
 }
 
 .nav{
+    display: inline-block;
     @include tablets{
         display: none;
     }
@@ -189,6 +191,7 @@
     align-items: center;
     margin-left: 1.875rem;
     display: none;
+    z-index: 100;
 
     @include tablets{
         display: inline-flex;
@@ -210,13 +213,36 @@
 	}
 
 	&:before {
-		top: 0;
+        top: 0;
+        @include iphone5{
+            top: -1px;
+          }
 	}
 
 	&:after {
 		bottom: 0;
 	}
 }
+
+.hamburger__menu-link.is-active .hamburger__bars{
+    background: transparent;
+    &:before {
+      transform: translateY(10px) translateX(0) rotate(45deg);
+      border-radius: 5px; 
+    
+      @include phones{
+        transform: translateY(7px) translateX(0) rotate(45deg);
+      }
+      @include iphone5{
+        transform: translateY(5px) translateX(0) rotate(45deg);
+      }
+    }
+
+    &:after {
+      transform: translateY(-7px) translateX(0) rotate(-45deg);
+      border-radius: 5px; 
+    }
+  }
 
 .points__list{
     position: fixed;
@@ -273,5 +299,76 @@
     width: rem(14px);
     height: rem(14px);
     opacity: 1;
+}
+
+// меню
+body.locked {
+    overflow: hidden;
+}
+.dark-menu{
+    position: absolute;
+    left: -9999px;
+    right: 0;
+    background: $dark;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 10;
+}
+
+.dark-menu.is-active {
+    display: flex;
+    opacity: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.nav_hamburger {
+    width: auto;
+
+    @include tablets{
+        display: block;
+    }
+}
+
+.nav__list {
+    width: 100%;
+}
+
+.nav_hamburger .nav__list {
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav__item_hamburger {
+    display: inline;
+    text-align: center;
+    animation-fill-mode: forwards;
+    transition: opacity .3s;
+
+    &:last-child {
+		margin-right: 0;
+		&:after {
+			display: none;
+		}
+	}
+}
+.nav__item_hamburger:after {
+    content: "";
+    vertical-align: middle;
+    width: rem(4px);
+    height: rem(4px);
+    border-radius: 50%;
+    background: white;
+    margin: 0 rem(12px);
+    display: block;
+    margin: 15px auto;
+    animation-fill-mode: forwards;
+}
+
+.nav_hamburger .nav__link {
+    font-size: rem(24px);
 }
 
