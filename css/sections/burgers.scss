@@ -8,6 +8,12 @@
 
 .slider-wrap{
     position: relative;
+
+    @include phones{
+    height: 95%;
+    display: flex;
+    align-items: center;
+    }
 }
 
 .slider__arrows-btn{
@@ -18,11 +24,18 @@
 .slider__arrows-prev{
     transform: rotate(90deg);
     left: rem(-20px);
+    @include phones{
+        left: 0;
+    }
 }
 
 .slider__arrows-next{
     transform: rotate(-90deg);
     right: rem(-20px);
+
+    @include phones{
+        right: 0;
+    }
 }
 
 .slider__icon{
@@ -33,7 +46,6 @@
 
 .burgers__item{
     display: flex;
-    position: relative;
 
     @include tablets{
         flex-direction: column;
@@ -65,10 +77,11 @@
 
     @include tablets{
         top: -15%;
-        left: 20%;
-    }
-    @include iphone5{
         left: 0;
+    }
+    @include phones{
+        left: 0;
+        top: 0;
     }
 }
 
@@ -121,11 +134,12 @@
 
     @include tablets{
         top: -15%;
-        left: 70%;
+        right: 0;
     }
 
-    @include iphone5{
-        left: 80%;
+    @include phones{
+        top: 0;
+        right: 0;
     }
 }
 
@@ -134,6 +148,7 @@
     width: 65px;
     height: 60px;
     position: relative;
+    background-size: contain;
 }
 
 .weight__number{

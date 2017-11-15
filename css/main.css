@@ -657,6 +657,17 @@ body.locked {
 
 .slider-wrap {
   position: relative; }
+  @media screen and (max-width: 480px) {
+    .slider-wrap {
+      height: 95%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .slider__arrows-btn {
   position: absolute;
@@ -667,12 +678,18 @@ body.locked {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   left: -1.25rem; }
+  @media screen and (max-width: 480px) {
+    .slider__arrows-prev {
+      left: 0; } }
 
 .slider__arrows-next {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   right: -1.25rem; }
+  @media screen and (max-width: 480px) {
+    .slider__arrows-next {
+      right: 0; } }
 
 .slider__icon {
   width: 1.875rem;
@@ -683,8 +700,7 @@ body.locked {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
-  position: relative; }
+  display: flex; }
   @media screen and (max-width: 768px) {
     .burgers__item {
       -webkit-box-orient: vertical;
@@ -729,10 +745,11 @@ body.locked {
   @media screen and (max-width: 768px) {
     .ingredients {
       top: -15%;
-      left: 20%; } }
-  @media screen and (max-width: 320px) {
-    .ingredients {
       left: 0; } }
+  @media screen and (max-width: 480px) {
+    .ingredients {
+      left: 0;
+      top: 0; } }
 
 .ingredients__icon {
   width: 2.8125rem;
@@ -802,16 +819,18 @@ body.locked {
   @media screen and (max-width: 768px) {
     .weight {
       top: -15%;
-      left: 70%; } }
-  @media screen and (max-width: 320px) {
+      right: 0; } }
+  @media screen and (max-width: 480px) {
     .weight {
-      left: 80%; } }
+      top: 0;
+      right: 0; } }
 
 .weight-block {
   background: url(../img/icons/i/kkal.svg) 50% no-repeat;
   width: 65px;
   height: 60px;
-  position: relative; }
+  position: relative;
+  background-size: contain; }
 
 .weight__number {
   position: absolute;
