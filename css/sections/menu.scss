@@ -1,0 +1,76 @@
+.menu{
+    background: url(../img/bg5.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.main__title--white{
+    color: $white;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.menu__acco{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.menu__acco-item {
+    float: left;
+    height: 100%;
+
+    &.active .menu__acco-title{
+        color: $mustard;
+    }
+
+    &.active .menu__acco-desc{
+        color: $mustard;
+        width: rem(540px);
+    }
+}
+
+.menu__acco-link{
+    width: rem(80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu__acco-title{
+    font-size: rem(40px);
+    color: $white;
+    font-family: Gagalin;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+}
+
+.menu__acco-desc{
+    height: 100%;
+    float: left;
+    background: rgba(#2f3234, 0.93);
+    width: 0;
+    overflow: hidden;
+}
+
+.menu__acco-text{
+    font-size: rem(14px);
+    font-weight: 300;
+    color: $white;
+    padding: rem(60px) rem(35px);
+    width: 100%;
+    line-height: rem(20px);
+    
+}

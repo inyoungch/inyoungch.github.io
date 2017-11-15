@@ -6,6 +6,10 @@ $dark:#2f3234;
 $orange:#e45028;
 $gray: #2f3234;
 
+$tablets:768px;
+$phones:480px;
+$iphone5:320px;
+
 //mixin
 
 @mixin dot{
@@ -22,6 +26,25 @@ $gray: #2f3234;
     @return $px  / 16px+0rem;
 }
 
+@mixin tablets{
+    @media screen and (max-width:$tablets){
+        @content;
+    }
+}
+
+@mixin phones{
+    @media screen and (max-width:$phones){
+        @content;
+    }
+}
+
+@mixin iphone5{
+    @media screen and (max-width:$iphone5){
+        @content;
+    }
+}
+
+
 //base
 
 @import "setup.scss";
@@ -30,4 +53,8 @@ $gray: #2f3234;
 
 @import "sections/hello.scss";
 @import "sections/best.scss";
+@import "sections/team.scss";
+@import "sections/menu.scss";
 @import "sections/feedback.scss";
+@import "sections/order.scss";
+@import "sections/map.scss";

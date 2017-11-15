@@ -46,15 +46,39 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Font Awesome';
+	src: url('../fonts/fontawesome-webfont.woff2') format('woff2'),
+		url('../fonts/fontawesome-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 *{
     box-sizing: border-box;
+}
+
+html{
+	font-size: 16px;
+
+	@include tablets{
+		font-size: 15px;
+	}
+
+	@include phones{
+		font-size: 14px;
+	}
+
+	@include iphone5{
+		font-size: 12px;
+	}
 }
 
 html, body{
     width: 100%;
     height: 100%;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 body{
@@ -62,7 +86,7 @@ body{
     font-weight: 300;
     font-style: normal;
     line-height: 1.42;
-    font-size: 18px;
+    font-size: rem(18px);
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -76,21 +100,23 @@ body{
 
 .content{
 	height: 100%;
-	min-height: 650px;
+	min-height: rem(650px);
 	transition: transform 0.7s;
     will-change: transform;
 }
 
 .section{
 	height: 100vh;
-	min-width: 940px;
-    min-height: 650px;
+    min-height: rem(650px);
 	background-color: #000000;
 	display: flex;
+	overflow: hidden;
 }
 
 .container{
-    max-width: 940px;
+	width: 95%;
+	max-width: rem(940px);
+	min-width: rem(320px);
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -98,6 +124,10 @@ body{
 	align-items: center;
 }
 
+footer{
+	position: relative;
+	width: 100%;
+}
 ul{
     padding: 0;
     margin: 0;

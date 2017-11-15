@@ -8,6 +8,11 @@
 .feedback__item{
     width: 25%;
     height: 50%;
+
+    @include tablets{
+        width: 50%;
+        height: 25%;
+    }
 }
 
 .feedback__block{
@@ -42,37 +47,78 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: .3s;
-    padding: 50px 50px 50px 25px;
+    padding: rem(50px) rem(50px) rem(50px) rem(25px);
     opacity: 0;
+
+    @include tablets{
+        padding: rem(20px) rem(60px);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    @include phones{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @include iphone5{
+        display: flex;
+        align-items: center;
+    }
 }
 
 .feedback__name{
-    font-size: 14px;
+    font-size: rem(14px);
     font-family: Gagalin;
     color: $white;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
+
+    @include tablets{
+        margin: 0;
+    }
+
+    @include phones{
+        font-size: rem(24px);
+        padding-bottom: rem(20px);
+    }
 }
 
 .feedback__text{
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 300;
     color: $white;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
+
+    @include tablets{
+        margin: 0;
+        line-height: 22px;
+    }
+
+    @include phones{
+        display: none;
+    }
 }
 
 .feedback__more{
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 500;
     color: $white;
-    line-height: 35px;
+    line-height: rem(35px);
     transition: .3s;
     border: 1px solid transparent;
     outline: none;
-    border-radius: 4px;
-    padding: 0 10px;
+    border-radius: rem(4px);
+    padding: 0 rem(10px);
     background-color: $gray;
 
     &:hover{
         background-color: darken($gray,10%);
+    }
+
+    @include phones{
+        width: rem(130px);
     }
 }

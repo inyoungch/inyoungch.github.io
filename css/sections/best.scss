@@ -1,14 +1,28 @@
 .best{
-    background: url(../img/bg2.jpg) no-repeat;
+    background: url(../img/bg2.jpg) center center no-repeat;
     background-size: cover;
+
+    @include tablets{
+        background: url(../img/tablets/bg2.jpg) no-repeat;
+    }
+
+    @include phones{
+        background: url(../img/phones/bg2.jpg) bottom no-repeat;
+        background-size: cover;
+    }
 }
 
 
 
 .main__title--dark{
     color: $dark;
-    margin-top: -80px;
-    padding-bottom: 70px;
+    margin-top: rem(-80px);
+    padding-bottom: rem(70px);
+
+    @include iphone5{
+        padding-bottom: rem(30px);
+        font-size: rem(50px);
+    }
 }
 
 .best-block{
@@ -19,24 +33,41 @@
 .advantage__list{
     display: flex;
 
+    @include phones{
+        flex-direction: column;
+    }
+}
+
+.advantage__item{
+    flex:1;
+    
+    @include phones{
+        margin-bottom: rem(40px);
+    }
 }
 
 .advantage__img{
-    width: 280px;
-    height: 100px;
+    height: rem(100px);
+
+    @include phones{
+        margin-right: 1.25rem;
+        width: 30%;
+    }
 }
 
 .advantage{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
-    height: 300px;
     text-align: center;
 
     & p{
         margin: 0;
 
+    }
+
+    @include phones{
+        flex-direction: row;
     }
 }
 
@@ -44,14 +75,30 @@
 .advantage__title{
     color: $dark;
     font-family: Lifehack;
-    font-size: 24px;
-    padding: 30px 0;
-    line-height: 24px;
+    font-size: rem(24px);
+    padding: rem(10px) 0;
+    line-height: rem(24px);
+
+    @include phones{
+        text-align: left;
+    }
+}
+
+.advantage__desc{
+    @include phones{
+        text-align: left;
+        display: block;
+        width: 65%;
+    }
 }
 
 .advantage__desc p{
     margin: 0;
     color: $dark;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 300;
+
+    @include phones{
+        text-align: left;
+    }
 }
