@@ -1,7 +1,9 @@
 .map{
-    background: url(../img/bg8.jpg) center center no-repeat;
-    background-size: cover;
-    position: relative;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .footer__container{
@@ -88,4 +90,13 @@
     &:hover{
         fill: $white;
     }
+}
+
+.map__balloon{
+    width: rem(100px);
+    text-align: center;
+}
+.map__burger-img{
+    width: rem(100px);
+    height: rem(100px);
 }

@@ -33,13 +33,15 @@
     margin-right: rem(220px);
     z-index: 200;
 
+    @include phones{
+        margin-right: 0;
+    }
     @include iphone5{
         margin-right: 0;
     }
 }
 
 .logo__img{
-    max-height: 100%;
     max-height: 100%;
     vertical-align: middle;
 }
@@ -92,7 +94,13 @@
 
 .order__btn-block{
     @include tablets{
-        margin-left: auto;
+        margin-left: rem(180px);
+    }
+    @include phones{
+        margin-left: rem(150px);
+    }
+    @include iphone5{
+        margin-left: rem(35px);
     }
 }
 
@@ -182,6 +190,15 @@
     display: flex;
     justify-content: center;
     padding-bottom: rem(40px);
+}
+
+.hamburger__menu{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    @include iphone5{
+        top: 5%;
+    }
 }
 
 .hamburger__menu-link{
@@ -295,7 +312,7 @@
 
 }
 
-.points__item--active .points__link::before, .points__link:hover:before{
+.points__item.is-active .points__link::before, .points__link:hover:before{
     width: rem(14px);
     height: rem(14px);
     opacity: 1;
