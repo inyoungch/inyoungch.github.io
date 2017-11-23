@@ -1,0 +1,246 @@
+.burgers{
+    background: #f9b43b; /* Old browsers */
+    background: -moz-linear-gradient(top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f9b43b 0%,#eb8c38 48%,#f9b43b 74%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 48%,#f9b43b 74%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 ); /* IE6-9 */
+}
+
+.slider-wrap{
+    position: relative;
+
+    @include phones{
+    height: 95%;
+    display: flex;
+    align-items: center;
+    }
+}
+
+.slider__arrows-btn{
+    position: absolute;
+    top: 50%;
+}
+
+.slider__arrows-prev{
+    transform: rotate(90deg);
+    left: rem(-20px);
+    @include phones{
+        left: 0;
+    }
+}
+
+.slider__arrows-next{
+    transform: rotate(-90deg);
+    right: rem(-20px);
+
+    @include phones{
+        right: 0;
+    }
+}
+
+.slider__icon{
+    width: rem(30px);
+    height: rem(30px);
+    fill: $white;
+}
+
+.burgers__item{
+    display: flex;
+
+    @include tablets{
+        flex-direction: column;
+    }
+}
+
+
+.ingredients{
+    width: rem(90px);
+    height: rem(90px);
+    background: rgba($orange, 0.4);
+    border-radius: rem(3px);
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover{
+        background: $orange;
+        .ingredients__dropdown{
+            left: 100%;
+            opacity: 1;
+        }
+    }
+
+    @include tablets{
+        top: -15%;
+        left: 0;
+    }
+    @include phones{
+        left: 0;
+        top: 0;
+    }
+}
+
+.ingredients__icon{
+    width: rem(45px);
+    height: rem(45px);
+}
+
+.ingredients__dropdown{
+    width: rem(270px);
+    background: rgba($white, 0.9);
+    border-radius: rem(3px);
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    left: rem(-9999px);
+    transition: opacity 1s;
+}
+
+.ingredients__item{
+    display: flex;
+    padding: rem(5px) rem(15px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ingredients__component{
+    color: $dark;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ingredients__weight{
+    color: $dark;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.weight{
+    width: rem(90px);
+    height: rem(90px);
+    opacity: .5;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 80%;
+
+    @include tablets{
+        top: -15%;
+        right: 0;
+    }
+
+    @include phones{
+        top: 0;
+        right: 0;
+    }
+}
+
+.weight-block{
+    background: url(../img/icons/i/kkal.svg) 50% no-repeat;
+    width: 65px;
+    height: 60px;
+    position: relative;
+    background-size: contain;
+}
+
+.weight__number{
+    position: absolute;
+    bottom: 8px;
+    left: 52%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 18px;
+    color: $white;
+    font-family: Gagalin;
+}
+
+.ingredients__text, .weight__text{
+    font-size: 14px;
+    color: $white;
+    font-family: Gagalin;
+}
+
+.weight__icon{
+    width: rem(60px);
+    height: rem(60px);
+}
+
+.slider__left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablets{
+        margin-bottom: rem(30px);
+    }
+}
+
+.slider__pic{
+    @include phones{
+        max-width: 75%;
+    }
+
+}
+
+.slider__title{
+    line-height: 65px;
+    @include tablets{
+        width: rem(350px);
+        text-align: center;
+    }
+
+    @include iphone5{
+        line-height: 40px;
+    }
+}
+
+.slider__desc{
+    font-size: 14px;
+    color: $white;
+    font-family: Ubuntu;
+    font-weight: 300;
+
+    @include tablets{
+        text-align: center;
+    }
+
+    @include iphone5{
+        font-size: 11px;
+    }
+}
+
+.slider__choose{
+    display: flex;
+    align-items: center;
+}
+
+.main__title--orange{
+    color: $orange;
+}
+
+.slider__choose-currency{
+    font-size: rem(30px);
+    color: $orange;
+    font-family: Gagalin;
+}
+
+.slider__right{
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: rem(590px);
+
+        @include phones{
+            width: 100%;
+        }
+    }
+}
