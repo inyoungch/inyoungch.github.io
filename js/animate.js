@@ -17,8 +17,8 @@ const performTransition = sectionEq=>{
     if (inScroll)return
         inScroll = true
 
-        const position = (sectionEq *-100)+'%';
-
+        // const position = (sectionEq *-100)+'%';
+        const position = (sectionEq *-100)+'vh';
 
         display.css({
             'transform':`translate(0, ${position})`,
@@ -284,12 +284,21 @@ let verticalAcco = () => {
   
   
   function init() {
+    // var map = new ymaps.Map("map", {
+    //   center: [52.96867353, 36.06171229],
+    //   zoom: 13,
+    //   controls: ["zoomControl"], 
+    //   behaviors: ['drag']
+    // });
+
     var map = new ymaps.Map("map", {
-      center: [52.96867353, 36.06171229],
-      zoom: 13,
-      controls: ["zoomControl"], 
-      behaviors: ["drag"]
-    });
+        center: [52.96867353, 36.06171229],
+        zoom: 13,
+        controls: ["zoomControl"], 
+        behaviors: ["drag"]
+      });
+      map.behaviors.disable(['drag', 'scrollZoom', 'dblClickZoom'])
+      
     placemarks.forEach(function(item){
       var placemark = new ymaps.Placemark(
           [item.latitude, item.longitude],
