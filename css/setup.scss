@@ -116,6 +116,14 @@ body{
 	display: flex;
 	overflow: hidden;
 	position: relative;
+
+	@include tablets{
+		min-height:initial;
+	}
+
+	@include phones{
+		min-height:initial;
+	}
 }
 
 .container{

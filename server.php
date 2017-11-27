@@ -40,7 +40,7 @@
     "MIME-Version: 1.0" . "\r\n" .
     "Content-type: text/html; charset=UTF-8" . "\r\n";
 
-    $mail = mail('maxim_91@inbox.ru', 'Заказ', $mail_message, $headers);
+    $mail = mail('inkatsoy08@gmail.com', 'Заказ', $mail_message, $headers);
 
     $data = [];
 

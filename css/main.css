@@ -99,6 +99,12 @@ body {
   display: flex;
   overflow: hidden;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .section {
+      min-height: initial; } }
+  @media screen and (max-width: 480px) {
+    .section {
+      min-height: initial; } }
 
 .container {
   width: 95%;
