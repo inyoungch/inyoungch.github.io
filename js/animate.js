@@ -330,3 +330,57 @@ let verticalAcco = () => {
     });
   };
   fancyboxModal();
+
+  //mask
+
+  $('.phone-mask').inputmask('+7 (999) 999 99 99');
+
+  //form
+
+  var ajaxForm = function (form) {
+    var url = form.attr('action'),
+        data = form.serialize();
+    return $.ajax({
+        type: 'POST',
+        url: url,
+        data: data,
+        dataType: 'JSON'
+    });
+}   
+var submitForm = function (e) {
+e.preventDefault();
+var form = $(e.target);
+var request = ajaxForm(form);
+request.done(function(msg) {
+  const popup = msg.status ? '#success' : '#error';
+  $status = $(popup)
+
+  $.fancybox.open( 
+    $status
+  , {
+      type: 'inline',
+      maxWidth: 250,
+      fitToView: false,
+      padding: 0,
+      afterClose() {
+        form.trigger('reset');
+      }
+    });
+  });
+
+  request.fail(function(jqXHR, textStatus) {
+    $.fancybox.open( 
+      $('#error').html("На сервере произошла ошибка: " + textStatus)
+    , {
+        type: 'inline',
+        maxWidth: 250,
+        fitToView: false,
+        padding: 0,
+        afterClose() {
+          form.trigger('reset');
+        }
+      });
+  });
+}
+
+$('#form__elem').on('submit', submitForm)

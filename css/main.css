@@ -1549,6 +1549,17 @@ body.locked {
   font-size: 0.875rem;
   cursor: pointer; }
 
+.status-popup {
+  width: 15.625rem; }
+
+.status-popup__inner {
+  text-align: center;
+  padding: 1rem; }
+
+.status-popup__message {
+  font-family: Ubuntu;
+  font-size: 0.75rem; }
+
 .map {
   position: absolute;
   top: 0;

@@ -174,3 +174,19 @@
     font-size: rem(14px);
     cursor: pointer;
   }
+
+  //status-popup
+
+  .status-popup{
+      width: rem(250px);
+  }
+
+  .status-popup__inner{
+      text-align: center;
+      padding: rem(16px);
+  }
+
+  .status-popup__message{
+      font-family: Ubuntu;
+      font-size: rem(12px);
+  }
