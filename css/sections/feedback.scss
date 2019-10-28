@@ -113,6 +113,7 @@
     border-radius: rem(4px);
     padding: 0 rem(10px);
     background-color: $gray;
+    cursor: pointer;
 
     &:hover{
         background-color: darken($gray,10%);
@@ -121,4 +122,50 @@
     @include phones{
         width: rem(130px);
     }
+}
+
+
+//full-review
+
+.full__review {
+    padding: rem(16px);
+    position: relative;
+    width: rem(470px);
+    height: rem(250px);
+    border-radius: rem(5px);
+
+    @include phones{
+        width: 60%;
+        height: 30%;
+    }
+}
+
+.popup{
+    display: none;
+}
+
+.full__review-close{
+    position: absolute;
+    right: 3%;
+}
+
+.full__review-close-icon{
+    width: 15px;
+    height: 15px;
+    fill: $orange;
+}
+
+.full__review-title{
+    font-family: Gagalin;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    color: $dark;
+}
+
+.full__review-text{
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 300;
+    color: $dark;
 }
